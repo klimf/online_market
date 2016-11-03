@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WetFox</title>
+
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div id="page">
+
+    <header class="shadow-2">
+        <div id="loader"></div>
+        <div class="row">
+            <div id="header" class="columns small-12 medium-12 large-12">
+                <label class="hover" id="logo" onclick="loadTemplate('main.html', function(){loadItems()})">
+                    <div style="text-align:center">WetFox</div>
+                </label>
+                <label class="hover" id="cat">
+                    <div class="big" style="text-align:center">Категории</div>
+                    <i class="material-icons little" style="font-size:48px;">menu</i>
+                </label>
+                <div id="search" class="shadow-2">
+                    <button id="button" type="submit">
+                        <div class="mdi-action-search cart-ic"></div>
+                    </button>
+                    <form method="get" action="/search" class="search">
+                        <input id="input" type="search" name="query" placeholder="Найти товары"
+                               class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list"
+                               aria-haspopup="true">
+                    </form>
+                </div>
+                <div id="searchcard" class="shadow-2">
+                    <p>Результаты поиска</p>
+                </div>
+                <div id="cart" class="shadow-2">
+                    <div class="mdi-action-shopping-cart cart-ic"></div>
+                    <h4>Корзина</h4>
+                </div>
+
+                <div id="cartcard" class="shadow-2">
+                    <ul class="cart-ul">
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="category" class="shadow-1">
+        <div id="tags" class="row">
+            <a onclick="loadTemplate('main.html', function(){loadItems()});">Главная</a>
+            <a onclick="loadTemplate('category.html', function(){loadItems()});">Все</a>
+            <a onclick="loadTemplate('category.html', function(){loadItems('элитное')});">Элитное</a>
+            <a onclick="loadTemplate('category.html', function(){loadItems('закуски')});">Закуски</a>
+            <a onclick="loadTemplate('order.html')">Офоримть заказ</a>
+        </div>
+    </div>
+
+    .preview>.top>
+
+    <div id="bg" class="row">
+        <div id="content" class="columns small-12 medium-12 large-12">
+            <div id="main" class="anim p1 row">
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="row">
+        <div id="footer" class="columns small-12 medium-12 large-12">
+            <p> © 2016 WetFox</p>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+
+    //$("#cartcard").load("partials/cartItem.html");
+    //$( "#main" ).load("partials/main.html");
+    preloadTemplate("main.html", function(){loadItems()});
+    //$(".title > h4").text(getData("http://95.85.2.42:1488/dishes")[0]["description"]);
+    $(".title > h4").text("qweqwe - {description}123123123{description}".replace(new RegExp("{description}", 'g'), "sthkokoko "));
+    var data = getData()[0];
+    //$(".title > h4").text(replaceWithData("qweqwe - {description}123123123",data));
+    //(".title > h4").text(data["description"]);
+
+</script>
+
+</body>
+</html>

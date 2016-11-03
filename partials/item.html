@@ -1,0 +1,16 @@
+<div id="product-{id}" class="product columns small-6 medium-3 large-3">
+    <div class="item shadow-1 hover-1 an" alt="{name}">
+        <div class="imgit" onclick="previewItem({id})">
+            <img itemprop="image" src="img/no-image.png" style="position:relative; z-index:1; height:60%; margin-top:20%;">
+        </div><div class="bottomit">
+        <span style="color:white; font-size:20px; text-align: left;">
+            <p style="margin: 14px" onclick="previewItem({id})">{name}
+                <b style="color:#FF5555">{price}</b>
+            </p>
+            <button class="add" onclick="addToCart({id})">
+                <i class="material-icons add-ic">add</i>
+            </button>
+        </span>
+    </div>
+    </div>
+</div>
