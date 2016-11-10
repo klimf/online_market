@@ -1,0 +1,29 @@
+<div id="back" onclick="loadTemplate('main.html', function(){loadItems()})" class="shadow-1 hover-1 waves-effect">
+    <div class="mdi-navigation-arrow-back back-ic"></div>
+</div>
+<div id="head" class="shadow-1 hover-1">
+    <h4>{name}</h4>
+</div>
+<div class="photos">
+    <div class="photo" class="shadow-1 hover-1">
+        <img itemprop="image" alt="{name}" src="{src}" style="float:left; position:relative; z-index:1; height:30%;">
+    </div>
+</div>
+<div class="cartbuy">
+    <div class="cartb" class="shadow-1 hover-1">
+        <div class="top">
+            <h4>Купить продукт</h4>
+        </div>
+        <p>
+            Описание:<br>
+            {description}
+        </p>
+        <!--span style="color:red; font-size:20px;margin-bottom:-20px"><p style="margin-bottom:-20px">Осталась {qty}</p></span-->
+        <span style="color:red;font-size:30px;"><p>Цена {price}P</p></span>
+
+    </div>
+    <div onclick="addToCart({id})" class="buyb shadow-1 hover-1 waves-effect">
+        <h4 class="">Купить</h4>
+    </div>
+</div>
+</div>

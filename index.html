@@ -55,10 +55,10 @@
     <div id="category" class="shadow-1">
         <div id="tags" class="row">
             <a onclick="loadTemplate('main.html', function(){loadItems()});">Главная</a>
-            <a onclick="loadTemplate('category.html', function(){loadItems()});">Все</a>
-            <a onclick="loadTemplate('category.html', function(){loadItems('элитное')});">Элитное</a>
-            <a onclick="loadTemplate('category.html', function(){loadItems('закуски')});">Закуски</a>
-            <a onclick="loadTemplate('order.html')">Офоримть заказ</a>
+            <a onclick="loadTemplate('category.html', function(){loadItems()})">Все</a>
+            <a onclick="loadTemplate('category.html', function(){loadItems('вегетерианское')})">Вегетерианское</a>
+            <a onclick="loadTemplate('category.html', function(){loadItems('мясное')})">Мясное</a>
+            <a onclick="loadTemplate('order.html', function() {loadOrderItems()})">Офоримть заказ</a>
         </div>
     </div>
 

@@ -1,0 +1,7 @@
+<div class='cart-footer'>
+    <p style="margin-top:10px;">
+        Итог:<b style="color:#FF5555; float: right">{price}Р</b>
+    </p>
+    <button class='cart-clear' onclick='clearCartData();'><i class="material-icons" style="font-size:36px;">clear</i></button>
+    <button class='cart-button' onclick="loadTemplate('order.html', function() {loadOrderItems()})"><h5>Оформить</h5></button>
+</div>
